@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatting Content</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőoldal</a></li>
+                <li><a href="structuringhtml.html">HTML Struktúra Kialakítása</a></li>
+                <li><a href="textformatting.html">Szövegek Formázása</a></li>
+                <li><a href="media.html">Grafikus Elemek és Média Elhelyezése</a></li>
+                <li><a href="makingforms.html">Formok Kialakítása</a></li>
+                <li><a href="accessibility.html">Hozzáférhetőség és Felhasználói Élmény</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+               <section>
+                    <h1>Headlines</h1>
+                        <p>
+                            <ul>
+                                <li>&lt;h1&gt;Legfontosabb elem&lt;/h1&gt;</li>
+                                <li>&lt;h2&gt;Nagyon fontos elemek&lt;/h2&gt;</li>
+                                <li>&lt;h3&gt;Fontos elem&lt;/h3&gt;</li>
+                                <li>&lt;h4&gt;Kicsit fontos elem&lt;/h4&gt;</li>
+                                <li>&lt;h5&gt;Kisjelentősségel bíró elem&lt;/h5&gt;</li>
+                                <li>&lt;h6&gt;Legkevésbé fontos elem&lt;/h6&gt;</li>
+                            </ul>
+                        </p>
+               </section>
+               <section>
+                   <h1>Text</h1>
+                        <p>Paragrafs: &lt;p&gt;Egyszerű szöveget teszünk bele&lt;/p&gt;</p>
+                        <p>Code Snippet: &lt;code&gt;Program kódok köré lehet tenni&lt;/code&gt;</p>
+                        <p>Pre-processed: &lt;pre&gt;Ha szeretnénk hogy az adott részen az intendációkat figyelembe vegye a böngésző [Code Snippets-eknél hasznos]&lt;/pre&gt;</p>
+                        <p>Small Print: &lt;small&gt;Apróbetűs részekhez pl: (Copyright) (Jogiinformációk)&lt;small&gt;</p>
+                        <p>Date and Time: &lt;time datetime="{yyyy-mm-dd}/{hh-mm-ss}"&gt;Ha konkrét időpontot vagy idő intervallumot akarunk megadni&lt;/time&gt;</p>
+                        <p>Link: &lt;a href="{URL}"&gt;Ha linké akarunk alakítani egy részt&lt;/a&gt;</p>
+                        <p><h2>Charachters</h2>
+                            <ul>
+                                <li>Italic: &lt;i&gt;Ha vizuálisan megakarunk különböztetni egy részt&lt;/i&gt;</li>
+                                <li>Emphasized: &lt;em&gt;Ha verbálisan is megakarunk különböztetni egy részt (Screen Readerek)&lt;/em&gt;</li>
+                                <li>Bold: &lt;b&gt;Ha vizuálisan kiakarsz emelni egy részt (Inkább ezt használd mint egy divet)&lt;/b&gt;</li>
+                                <li>Strong: &lt;strong&gt;Ha verbálisan is kiakarsz emelni egy részt&lt;/strong&gt;</li>
+                                <li>Lower Index: &lt;sub&gt;Ha alsó indexé akarunk alakítani egy részt&lt;sub&gt;</li>
+                                <li>Upper Index: &lt;sup&gt;Ha felső indexé akarunk alakítani egy részt&lt;/sup&gt;</li>
+                            </ul>
+                        </p>
+                        <p><h2>Quotes</h2>
+                            <ul>
+                                <li>Cite: &lt;cite&gt;A szöveget idéző elem köré tesszük&lt;/cite&gt;</li>
+                                <li>Blockquote: &lt;blockquote&gt;Több soros idézetek köré tesszük [Block-line]&lt;/blockquote&gt;</li>
+                                <li>Quotation Mark: &lt;q&gt;Idézet rész köré tesszük [In-line]&lt;/q&gt;</li>
+                            </ul>
+                        </p>
+                        <p><h2>Lists</h2>
+                            <ul>
+                                <li>Unordered List: &lt;ul&gt;Hogyha a listába rendezett elemek sorrendje nem számít&lt;/ul&gt;</li>
+                                <li>Ordered List: &lt;ol&gt;Hogyha a listába rendezett elemek sorrendje számít&lt;/ol&gt;</li>
+                                <li>Definition List: &lt;dl&gt;Hogyha olyan elemeket rendezünk egy listába amikhez leírásokat akarunk társítani [Olyan mint egy C# Dictionary]
+                                    <ul>
+                                        <li> &lt;dt&gt;Egy állítás&lt;/dt&gt;
+                                            <ul> 
+                                                <li>&lt;dd&gt;Leírás&lt;/dd&gt;</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    &lt;/dl&gt;
+                                </li>
+                            </ul>
+                        </p>                           
+                </section>
+                <section>
+                    <h1>Tables</h1>
+                    <p>Table: &lt;table&gt;Ha létre akarunk hozni egy táblázatot&lt;/table&gt;</p>
+                    <p>Table Row: &lt;tr&gt;Sort ad a táblázatunkhoz&lt;/tr&gt;</p>
+                    <p>Table Header: &lt;th&gt;Ha oszlop fejlécet akarunk&lt;/th&gt;</p>
+                    <p>Table Data: &lt;td&gt;Ha cellát akarunk létrehozni egy sorban&lt;/td&gt;</p>
+                </section>
+        </article>
+    </main>
+</body>
+</html>
