@@ -19,43 +19,49 @@
         </nav>
     </header>
     <main>
-        <code>
-            <pre>
-                &lt;DOCTYPE! html&gt; <small>Melyik HTML verziót használjuk</small>
-                &lt;html&gt; <small>Ezzel jelöljük a HTML file-unk kezdetét és végét</small>
-                    &lt;head&gt; <small>Ide ketül minden olyan információ az oldalunkról amit a Böngészőnek tudnia kell</small>
-                        &lt;meta&gt; <small>Metadatok ide kerülnek (Karakterkódolás) (Oldal leírása)</small>
-                        &lt;link href="{URL}" rel="{Kapcsolat típusa}"&gt; <small>Kapcsolódó file-okat itt lehet megadni (Stíluslapok) (Ikonok)</small>
-                        &lt;title&gt;&lt;/title&gt; <small>Weboldalunk hivatalos címe</small>
-                    &lt;/head&gt;
-                    &lt;body&gt; <small>Minden olyan tartalom amely megjelenik a Weboldalunkon</small>
-                        &lt;header&gt; <small>Fejléc (Logó) (Navigáció) (Címek)</small>
-                            &lt;nav&gt;&lt;/nav&gt; <small>Navigációs részhez</small>
-                        &lt;header&gt; 
-                        &lt;main&gt; <small>Itt kell az oldal fő tartalmát elhelyezni [Ezt csak egyszer szokás használni oldalanként]</small>
-                            &lt;article&gt; <small>Olyan elemeket teszünk bele melyek egy tartalom egységet képeznek pl: (Bejegyzések) (Posztok) (Kártyák)</small>
-                                &lt;section&gt; <small>A tartalom részekre bontásához használható pl: (Fejezetek)</small>
-                                    &lt;aside&gt;&lt;/aside&gt; <small>Mellékes elemekhez pl: (Hirdetések) (Oldalsáv) (Érdekességek)</small>
-                                    &lt;figure&gt;<small>Grafikus elemeket lehet elhelyezni benne</small>
-                                        &lt;figcaption&gt;&lt;/figcaption&gt; <small>A Grafikus elemhez tartozó leírás köré kell tenni</small>
-                                    &lt;/figure&gt; 
-                                &lt;/section&gt;
-                                    &lt;div&gt;&lt;/div&gt; <small>Ha nincs olyan tag ami passzolna az elemhez [Block-line]</small>
-                                    &lt;span&gt;&lt;/span&gt; <small>Ha nincs olyan tag ami passzolna az elemhez [In-line]</small>
-                                &lt;section&gt;
-                                &lt;/section&gt;
-                            &lt;/article&gt;
-                            &lt;article&gt;
-                                &lt;header&gt;&lt;/header&gt; <small>Header-eket célszerű lehet szalagcímekhez is használni</small>
-                                &lt;section&gt;&lt;/section&gt;
-                            &lt;/article&gt;
-                        &lt;/main&gt;
-                        &lt;footer&gt;&lt;/footer&gt; <small>Oldalak vagy Bejegyzések végén érdemes használni apróbetűs részekhez pl: (Copyright) (Referencia Linkek)</small>
-                    &lt;/body&gt;
-                &lt;/html&gt;
-            </pre>
-        </code>
+        <article>          
+            <section>
+                <h2>Boilerplate</h2>
+                <code>
+                    <pre>                       
+                        &lt;DOCTYPE! html&gt; <small>Melyik HTML verziót használjuk</small>
+                        &lt;html&gt; <small>Ezzel jelöljük a HTML file-unk kezdetét és végét</small>
+                            &lt;head&gt; <small>Ide ketül minden olyan információ az oldalunkról amit a Böngészőnek tudnia kell</small>
+                                &lt;meta&gt; <small>Metadatok ide kerülnek (Karakterkódolás) (Oldal leírása)</small>
+                                &lt;link href="{URL}" rel="{Kapcsolat típusa}"&gt; <small>Kapcsolódó file-okat itt lehet megadni (Stíluslapok) (Ikonok)</small>
+                                &lt;title&gt;&lt;/title&gt; <small>Weboldalunk hivatalos címe</small>
+                            &lt;/head&gt;
+                            &lt;body&gt; <small>Minden olyan tartalom amely megjelenik a Weboldalunkon</small>
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                    </pre>
+                </code>
+            </section>
+            <section>
+                <h2>Semantical Elements</h2>
+                <ul>
+                    <li>&lt;header&gt; &lt;/header&gt;<small>Fejléc (Logó) (Navigáció) (Címek) (Szalagcímek)</small></li>
+                    <li>&lt;main&gt; &lt;/main&gt;<small>Itt kell az oldal fő tartalmát elhelyezni [Ezt csak egyszer szokás használni oldalanként]</small></li>
+                    <li>&lt;footer&gt; &lt;/footer&gt; <small>Oldalak vagy Bejegyzések végén érdemes használni apróbetűs részekhez pl: (Copyright) (Referencia Linkek)</small></li>
+                    <li>&lt;nav&gt; &lt;/nav&gt; <small>Navigációs részhez</small></li>
+                    <li>&lt;article&gt; &lt;/article&gt;<small>Olyan elemeket teszünk bele melyek egy tartalom egységet képeznek pl: (Bejegyzések) (Posztok) (Kártyák)</small></li>
+                    <li>&lt;section&gt; &lt;/section&gt;<small>A tartalom részekre bontásához használható pl: (Fejezetek)</small></li>
+                    <li>&lt;aside&gt; &lt;/aside&gt; <small>Mellékes elemekhez pl: (Hirdetések) (Oldalsáv) (Érdekességek)</small></li>
+                    <li>&lt;figure&gt; &lt;/figure&gt;<small>Grafikus elemeket lehet elhelyezni benne</small>
+                        <ul>
+                            <li>&lt;figcaption&gt;&lt;/figcaption&gt; <small>A Grafikus elemhez tartozó leírás köré kell tenni</small></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Non Semantical Elelements</h2>
+                <ul>
+                    <li>&lt;div&gt;&lt;/div&gt; <small>Ha nincs olyan tag ami passzolna egy Block-line elemhez </small></li>
+                    <li>&lt;span&gt;&lt;/span&gt; <small>Ha nincs olyan tag ami passzolna egy In-line elemhez </small></li>
+                </ul>
+            </section>
+        </article>
     </main>
-    <footer></footer>
 </body>
 </html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animáció</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="architecture.html">Tervezés</a></li>
+                <li><a href="layouts.html">Oldal elrendezése</a></li>
+                <li><a href="design.html">Design</a></li>
+                <li><a href="animations.html">Animáció</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>Tervezés</h2>
+                <p><a href="https://csstriggers.com/" target="_blank">Trigger Elemek</a></p>
+                <p>Keyframe-t lineáris animációknál érdemes használni azaz ha fix pontból indul és fix pontban ér véget <br> vagy állapot függő animációknál véges variációval</p>
+                <p>Transition-t két állapot közötti váltásnál érdemes használni </p>
+                <p>Érdemes lehet JavaScripthez fordulni ha:
+                    <ul>
+                        <li>Komplex állapotfüggő az animáció sok variációval</li>
+                        <li>Dinamikus az az menetközben változó az animáció</li>
+                        <li>Ha valós fizikát akarunk szimulálni</li>
+                        <li>Ha régi böngészőkkel is kompatibilisek akarunk maradni</li>
+                    </ul>
+                </p>
+                <p>Az opacity, scale, rotation és position változtatások emésztik fel a legkevesebb erőforrást</p>
+            </section>
+            <section>
+                <h2>Animációk</h2>
+                <p>Keyframe: {Number}% arra van hogy az animáció hosszának a megadott százalékát átlépve érvénybe lépjen a változás
+                    <pre>
+                        @keyframes {animationName} {
+                            {Number}% {transform: {method}({Value});}
+                            {Number}% {transform: {method}({Value});}
+                            ...
+                        }
+                    </pre>
+                </p>
+                <p>Animáció Tulajdonságok:
+                    <ul>
+                        <li>animation-name: {animationName};</li>
+                        <li>animation-duration: {time};</li>
+                        <li>animation-timing-function: {timeFunction};</li>
+                        <li>animation-iteration-count: {Number/infinite}</li>
+                        <li>animation-delay: {time};</li>
+                        <li>animation-fill-mode: 
+                            <ul>
+                                <li>none</li>
+                                <li>backwards: Az animáció végén vissza ugrik az elem a kezdőpontba</li>
+                                <li>forward: Az animáció végén megtartja az elem a helyét</li>
+                                <li>both: Az elem "vissza ugrik" a kiinduló pontra de vizuálisan nem történik változás</li>
+                            </ul>
+                        </li>
+                        <li>animation-direction: 
+                            <ul>
+                                <li>normal: Elejétől a végéig játszódik le az animáció</li>
+                                <li>reverse: Végétől az elejéig játsza le az animációt</li>
+                                <li>alternate: Minden egyes iteráció alkalmával változik hogy elejétől végéig vagy végétől az elejéig játszódik le az animáció</li>
+                                <li>alternate-reverse: Minden egyes iteráció alkalmával változik hogy végétől az elejéig vagy elejétől a végéig játszódik le az animáció</li>                       
+                            </ul>
+                        </li>
+                        <li>animation-play-state: {running/paused}</li>
+                    </ul>
+                </p>
+                <p>Shorthand: animation: {AnimationName} {AnimationDuration} {AnimationDelay} {TimingFunction} {FillMode}, {SecondAnimationName} {SecondAnimationDuration} {SecondAnimationDelay} {SecondTimingFunction} {SecondFillMode};</p>
+            </section>
+            <section>
+                <h2>Átmenetek</h2>
+                <p>transition: {Property} {duration} {timeFunction} {Delay};</p>
+                <p>Asszimetrikus Transzformáció: Ha ki indulási Selectrohoz a visszatérési átmenetet a végső Selectorhoz pedig a ki indulási átmenetet teszed.</p>
+                <p>Timing Functions:
+                    <ul>
+                        <li>ease: Lassan kezd, majd gyorsul de lassuló tempóval</li>
+                        <li>linear: Egyenletesen változik a sebesség</li>
+                        <li>ease-in: Lassan indul majd végig gyorsul</li>
+                        <li>ease-out: Gyorsan indul majd végig lassul</li>
+                        <li>ease-in-out: Lassan kezd, majd gyorsul, majd megint lassul</li>
+                        <li>Egyedi: cubic-bezier({x1},{y1},{x2},{y2}) vagy <a href="https://cubic-bezier.com/" target="_blank">Cubic Brezier Tool</a></li>
+                    </ul>
+                </p>
+                <p>Sprite Animációkhoz Step Graph:
+                    <ul>
+                        <li>step-start</li>
+                        <li>step-end</li>
+                        <li>steps(n, start)</li>
+                        <li>steps(n, end)</li>
+                    </ul>
+                </p>
+            </section>
+            <section>
+                <h2>Transzformáció</h2>
+                <p>Az elváltoztatás mindig az elem abszolút helyzetéhez képest történik ezért fontos a változások sorrendje!</p>
+                <p>2D Transzformációk
+                    <ul>
+                        <li>Eltolás: translate({xValue},{yValue})</li>
+                        <li>Forgatás: rotate({xValue},{yValue})</li>
+                        <li>Méretváltoztatás:scale({xValue},{yValue})</li>
+                        <li>Ferdén Eltolás: skew({xValue},{yValue})</li>
+                        <li>Az elváltozás pontjának megadása: transform-origin({position},{direction})</li>
+                    </ul>
+                </p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

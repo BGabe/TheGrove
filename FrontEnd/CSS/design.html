@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="architecture.html">Tervezés</a></li>
+                <li><a href="layouts.html">Oldal elrendezése</a></li>
+                <li><a href="design.html">Design</a></li>
+                <li><a href="animations.html">Animáció</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>Színek</h2>
+                <p><a href="https://colours.neilorangepeel.com/" target="_blank">Szín Katalógus</a></p>
+                <p><a href="https://coolors.co/" target="_blank">Színpaletta összeállítása</a></p>
+                <p><a href="https://randoma11y.com/" target="_blank">Magas kontrasztal rendelkező színkombinációk előállítása</a></p>
+            </section>
+            <section>
+                <h2>Tipográfia</h2>
+                <p><a href="https://www.cssfontstack.com/" target="_blank">Font ellenőrző</a></p>
+                <p>Typeface kiválsztásánál két szempont van:
+                    <ol>
+                        <li>Legyen könnyen olvasható</li>
+                        <li>Stílusa egyezzen meg üzenetünk tónusával</li>
+                    </ol>
+                </p>
+                <p>Gyakori Typefacek: 
+                    <ul>
+                        <li>Scripts: Stílusa a kézzel írott szövegekhez hasonlít, elegáns és főleg meghívókhoz illik, kisméretben nehezen olvasható (cursive fonts)</li>
+                        <li>Decorative: Fejlécekhez vagy érdekességekhez illik (fantasy fonts)</li>
+                        <li>Monospace: Program kódhoz használják (monospace fonts)</li>
+                        <li>Serif: Tradicionális, formális dokumentumokhoz illik (serif fonts)</li>
+                        <li>Sans-Serif: Modern, általánosan használható (sans-serif fonts)</li>
+                    </ul>
+                </p>
+                <p>Font Stackek:
+                    <ul>
+                        <li>font-family: ({primaryFont},{secondaryFont},{fallBackFont})</li>
+                        <li>2-3 fontnál többet nem érdemes megadni</li>
+                    </ul>
+                </p>
+                <p>Font Face-ek: Így csatolhatunk Font fileokat az oldalunkhoz
+                    <pre>
+                        @font-face {
+                            font-family: "{customFontName}"
+                            src: url({URL})
+                        }
+                    </pre>
+                </p>
+                <p>Font Weight Nevezéktan:
+                    <ul>
+                        <li>100 - Thin</li>
+                        <li>200 - Extra Light</li>
+                        <li>300 - Light</li>
+                        <li>400 - Normal</li>
+                        <li>500 - Medium</li>
+                        <li>600 - Semi Bold</li>
+                        <li>700 - Bold</li>
+                        <li>800 - Extra Bold</li>
+                        <li>900 - Black</li>
+                    </ul>
+                </p>
+                <p>Font Property Sorthand: font: {paramtersInOrder}
+                    <ol>
+                        <li>font-style (Opcionális)</li>
+                        <li>font-variant (Opcionális)</li>
+                        <li>font-weight (Opcionális)</li>
+                        <li>font-size</li>
+                        <li>line-height (Opcionális)</li>
+                        <li>font-family</li>
+                    </ol>
+                </p>
+                <p>Text Decoration Property Sorthand: text-decoration: {paramtersInOrder}
+                    <ol>
+                        <li>text-decoration-line</li>
+                        <li>text-decoration-color</li>
+                        <li>text-decoration-style</li>
+                    </ol>
+                </p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

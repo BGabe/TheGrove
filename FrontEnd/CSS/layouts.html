@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Az oldal elrendezése</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="architecture.html">Tervezés</a></li>
+                <li><a href="layouts.html">Oldal elrendezése</a></li>
+                <li><a href="design.html">Design</a></li>
+                <li><a href="animations.html">Animáció</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>Floatolás</h2>
+                <p>Float: float: {left/right};</p>
+                <p>Display Flow visszaállítása: clear: {left/right/both};</p>
+                <p>Ha túlszalad a Folatolt elem a konténerén: overflow: {hidden/auto/scroll}</p>
+                <p>Clearfix Hack:Ezt akkor érdemes használni ha nem tudunk hová clear propertyt beszúrni</p>
+                <p>Box Model Fix: 
+                    <ol>
+                        <li>Padding és Border property-k értékeinek hozzáadása a Width és Height property-k értékeihez: box-sizing: content-box;</li>
+                        <li>Width és Height property-k értékeiből kerül levonásra a Border és a Padding property-k értéke: box-sizing: border-box;</li>
+                    </ol>
+                </p>
+            </section>
+            <section>
+                <h2>Pozícionálás</h2>
+                <p>Pozíció Típusa:
+                    <ul>
+                        <li>Független: position: static</li>
+                        <li>Jelenlegi pozícióhoz képest relatív: position: relative</li>
+                        <li>Szülőelemhez képest ralatív: position: absolute </li>
+                        <li>Viewporthoz képest relatív: position: fixed</li>
+                        <li>Viewporthoz és a szülőelemhez képest relatív: position: sticky</li>
+                    </ul>
+                </p>
+                <p>Pózíció beállítása:
+                    <ul>
+                        <li>top: {Value};</li>
+                        <li>right: {Value};</li>
+                        <li>bottom: {Value};</li>
+                        <li>left: {Value};</li>
+                    </ul>
+                </p>            
+            </section>
+            <section>
+                <h2>Stackelés</h2>
+                <p>Ha az alapvető Stacking Ordert szeretnénk befolyásolni: z-index: {Number};</p>
+                <p>Stacking Order:
+                    <ol>
+                        <li>Root Element</li>
+                        <li>Block-level elements</li>
+                        <li>Floated Elements</li>
+                        <li>In-line elements</li>
+                        <li>Positioned elements</li>
+                    </ol>
+                </p>
+            </section>
+            <section>
+                <h2>Flexbox</h2>
+                <p>Egydimenziós elrendezésekhez (Horizontális vagy Vertikális)</p>
+                <p>Flex Container: A szülőelem display property-jét kell beállítani: 
+                    <ul>
+                        <li>{felx} Ha Block-line viselkedést akarunk</li>
+                        <li>{inline-flex} Ha in-line viselkedést akarunk</li>
+                    </ul>
+                </p>
+                <p>Fő tengely irányának megadása: flex-direction: {row/row-reverse/column/column-reverse};</p>
+                <p>Ha az elemek nemférnek el egymás mellett: flex-wrap:
+                    <ul>
+                        <li>{nowrap} Az elemek mérete dinamikusan változik hogy mindig elférjenek egymás mellett</li>
+                        <li>{wrap} Ha nincs elég hely a sor eltörik</li>
+                    </ul>
+                </p>
+                <p>Shorthand: flex-flow: {flex-direction} {flex-wrap};</p>
+                <p>Flex itemek kezdeti méretének beállítása: flex-basis: {LengthValue};</p>
+                <p>Flex itemek fölösleges hely kitöltése: flex-grow: {Number} </p>
+                <p>Flex itemek méretcsökkenése hely hiányában: flex-shrink: {Number}</p>
+                <p>Shorthand: flex: {growValue} {shrinkValue} {basisValue};</p>
+                <p>Flex itemek főtengelyen való igazítása: justify-content:
+                    <ul>
+                        <li>{start} Flownak megfelelő elhelyezkedés</li>
+                        <li>{center} Főtengelyen középre igazítás</li>
+                    </ul>
+                </p>
+                <p>Flex itemek kereszt tengelyen való igazítása: align-items</p>
+            </section>
+            <section>
+                <h2>Grid</h2>
+                <p>Grid Container: A szülőelem display property-jét kell beállítani: 
+                    <ul>
+                        <li>{grid} Ha Block-line viselkedést akarunk</li>
+                        <li>{inline-grid} Ha in-line viselkedést akarunk</li>
+                    </ul>
+                </p>
+                <p>Ha az egész Grid Konténert igazítani akarjuk: justify-content: {position};</p>
+                <p>Grid Items: Csak a szülő elemek közvetlen leszármazottai
+                    <ul>
+                        <li>Elem elhelyezése oszlopban: grid-column: {Start Number/CustomName} / {End Number/CustomName};</li>
+                        <li>Elem elhelyezése sorban: grid-row: {Start Number/CustomName} / {End Number/CustomName};</li>
+                        <li>Shorthand: Ha a {CustomName}-et úgy adjuk meg hogy oda tesszük hogy -Start vagy -End akkor ha értékül adjuk őket és elhagyjuk az előbbi suffixeket azzal összevonunk</li>
+                        <li>Elem elhelyezése Grid Area-val: grid-area: {AreaName};</li>
+                    </ul>
+                </p>
+                <p>Sorok és oszlopok egyértelmű megadása:
+                    <ul>
+                        <li>grid-template-column: {firstColumnCustomName} {firstColumnLength}...</li>
+                        <li>grid-template-row: {firstRowCustomName} {firstRowLength}...</li>
+                    </ul>
+                </p>
+                <p>Autómatikusan generált sorok és oszlopok szabályzása
+                    <ul>
+                        <li>grid-auto-column: {columnLength}</li>
+                        <li>grid-auto-row: {rowLength}</li>
+                    </ul>
+                </p>
+                <p>Grid Area: Előre el nevezzük a Gridünk területeit majd azokat használjuk a tartalom elhelyezésére
+                    <ul>grid-template-areas:
+                        <li>"{AreaName} {AreaName} {AreaName}"</li>
+                        <li>"{AreaName} {AreaName} {AreaName}";</li>
+                        <li>Ha egy {AreaName} helyére . teszek akkor az a cella üres marad</li>
+                    </ul>
+                </p>
+                <p>Grid Gap: Sorok és oszlopok között lévő üres tér: grid-gap: {RowLengthValue} {ColumnLengthValue};</p>
+            </section>
+            <section>
+                <h2>Mértékegységek</h2>
+                <p>Absolute: Fix egységek, szülőelem nem befolyásolja az értékét
+                    <ul>
+                        <li>Pixel: {Number}px Ez az ideális választás ha Absolute mértékegységre van szükség, egész számként kell megadni</li>
+                    </ul>
+                </p>
+                <p>Relative: Relatív egységek az Ős és a szülőosztály tulajdonságaitól függ az értékük
+                    <ul>
+                        <li>em: 1em = az örökölt mérettel, lehet törtként is alkalmazni</li>
+                        <li>rem: Root em, 1rem = az ős elmemtől örökölt mérettel</li>
+                    </ul>
+                </p>
+                <p>Fraction Unit: Az adott konténer elemben elérhető terület megadott részének felel meg</p>
+                <p>Mértékegység Metódusok:
+                    <ul>
+                        <li>repeat({Number of Repeats}, {LengthUnit}) </li>
+                        <li>minmax({MinLengthValue}, {MaxLengthValue}) </li>
+                    </ul>
+                </p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

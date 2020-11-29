@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Architecture</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="architecture.html">Tervezés</a></li>
+                <li><a href="layouts.html">Oldal elrendezése</a></li>
+                <li><a href="design.html">Design</a></li>
+                <li><a href="animations.html">Animáció</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>A Tervezés Elvei</h2>
+                <ul>
+                    <li>Minnél kevesebb öröklődés és specifikusság</li>
+                    <li>Hatékony és újrahasználható kód</li>
+                    <li>Karbantartható és skálázható kód</li>
+                    <li>Jól dokumentált kód</li>
+                    <li>Egységes kódbázis meghatározott név konvenciókkal</li>
+                </ul>
+            </section>           
+            <section>
+                <h2>Selecktorok</h2>
+                <p>Univerzális Selector: * Az összes HTML elemre érvényes lesz </p>
+                <p>Type Selector: {HTMLTag} Az összes megadott HTML elemre érvényes lesz</p>
+                <p>Class Selector: .{className} Az összes olyan HTML elemre érvényes lesz ami az adott osztályba tartozik, több elmhez is hozzárendelhető</p>
+                <p>ID Selector: #{IDName} A megjelölt HTML elemre lesz érvényes csak egyszerhasználható és nagyo specifikus de in-page linkingre jól használható</p>
+                <p>Descedent Selector: {parentElement} {childElement} A megadott ős HTML elemen belüli gyermek elemre lesz érvényes, 2-3 szintnél beljebb nem érdems menni</p>
+                <p>Pseudo Class Selectors: :{pseudoClass} Dinamikus Selectorok, az őselem megadott eventjére érvényesek</p>
+                <p>Important:{Property}: {Value} !important A megadott elmnél felülírja a Source Ordert és a Specificity értékeket is </p>
+                <p>Grouping Selectors: {FirstElement},{SecondElement},{ThirdElement} A megadott HTML elemekre lesz érvényes</p>
+                <p>Combinator: 
+                    <ul>
+                        <li>Child Combinator: {parentElement} > {childElement} A megadott szülőelem közvetlen gyermekelemeire lesz érvényes</li>
+                        <li>General Sibling Combinator:  {childElement} ~ {childElement} Azokra az elemekre lesz érvényes melyeknek közös a szülőelemük és a baloldali elem után helyezkednek el</li>
+                        <li>Sibling Combinator: {childElement} + {childElement} Arra az elemre lesz érvényes melynek közös a szülőelemük és közvetlen a baloldali elem után helyezkedik el</li>
+                        <li>First-Last Módosító:
+                            <ul>
+                                <li>{childElement}:first-child Minden megadott elemre amely az első egy szülő elemen belül</li>
+                                <li>{childElement}:last-child Minden megadott elemre amely az utolsó egy szülő elemen belül</li>
+                                <li>{childElement}:first-type Az első megadott típusú elemre a dokumentumban</li>
+                                <li>{childElement}:last-type Az utolsó megadott típusú elemre a dokumentumban</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
+                <p>Változók: A változók scopeoltak a root-ban elhelyezkedő elmek számítanak globalnak
+                    <ul>
+                        <li>Deklarálásuk:
+                            <pre>
+                                :root {
+                                    --{variable-name}: {Value};
+                                }
+                            </pre>
+                        </li>
+                        <li>Használatuk:
+                            <pre>
+                                {Selector} {
+                                    {Property}: var(--{variable-name})
+                                }
+                            </pre>
+                        </li>
+                    </ul>
+                </p>
+            </section>
+            <section>
+                <h2>Responzív Design</h2>
+                <p>Média Query:
+                    <pre>
+                        @media {screen/speech} and {media feature} {
+                            {CSS}
+                        }
+                    </pre>
+                </p>
+                <p>Feature Query:
+                    <pre>
+                        @support ({feature}) {
+                            {CSS}
+                        }
+                    </pre>
+                </p>
+            </section>
+            <section>
+                <h2>CSS Architektúra Metolodógiák</h2>
+                <h3><a href="http://smacss.com/" target="_blank">SMACSS: Scalabel and Modular Architecture CSS</a></h3>
+                <h4>Base: Alap stílusok</h4>
+                <ul>
+                    <li>Type Selectors</li>
+                    <li>Descedent Selectors</li>
+                    <li>Child Selectors</li>
+                    <li>Pseudo-Class Selectors</li>
+                </ul>
+                <h4>Layout: Fő oldal elemek</h4>
+                <ul>
+                    <li>ID-kat itt használj de kerüld őket ha lehet</li>
+                    <li>Minden szabály előtt használd az l- prefixumot</li>
+                </ul>
+                <h4>Modules: Újrahasználható komponensek amiket a layout elemek tartalmaznak</h4>
+                <ul>
+                    <li>Ennél a résznél csak Class Selectorokat használj</li>
+                    <li>Ha alosztályt használunk az ős osztályt nevét használd prefixumként</li>
+                </ul>
+                <h4>State: Olyan változások amelyek az ldal állapot változását jelölik</h4>
+                <ul>
+                    <li>Használd őket az is- prefixummal</li>
+                </ul>
+                <h4>Theme: Stíluselemek amelyek egységesek az oldalon</h4>
+                <ul>
+                    <li>Színpaletta</li>
+                    <li>Font face</li>
+                </ul>
+                <h3>ITCSS: Inverted Triangle CSS</h3>
+                <ol>
+                    <li>Settings: Globális beállítások és változók (Csak Preprocessor használata esetén)</li>
+                    <li>Tools: Globális mixin-ek és funkciók (Csak Preprocessor használata esetén)</li>
+                    <li>Generic: High-level stílusok pl: (CSS reset)</li>
+                    <li>Elements: HTML Type Selectorok</li>
+                    <li>Objects: Class Selectorok a layout kialakítására</li>
+                    <li>Components: UI elemek és komponensek kinézetének szabályzása</li>
+                    <li>Trumps: Legspecifikusabb szabályok és segéd Class Selectorok</li>
+                </ol>
+            </section>
+        </article>
+    </main> 
+</body>
+</html>
