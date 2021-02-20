@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Események</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőoldal</a></li>
+                <li><a href="objectoriented.html">Objektum Orientált Programozása</a></li>
+                <li><a href="events.html">Események</a></li>
+                <li><a href="apis.html">API</a></li>
+                <li><a href="tricks.html">Trükkök</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>DOM Manipuláció</h2>
+                <h3>Metódusok</h3>
+                <p>Megragadja az első megadott elemet<code>document.querySelector({HTML Element});</code></p>
+                <p>Megragadja az összes megadott elemet<code>document.querySelectorAll({HTML Element});</code></p>
+                <p>Új attribútum értékek hozzáfűzése elemekhez<code>add();</code></p>
+                <p>Attribútum értékeket lehet törölni elemkből<code>remove();</code></p>
+                <p>Ki-be lehet kapcsolni az elemekhez tartozó attribútumokat<code>toggle();</code></p>
+                <h3>Property-k</h3>
+                <p>A megragadott elem tartalma <code>innerHTML</code></p>
+                <p>A megragadott elem és tartalma <code>outerHTML</code></p>
+                <p>Az adott elemhez tartozó id <code>id</code></p>
+                <p>Az adott az elemhez tartozó osztályok nevei <code>className</code></p>
+                <p>Az adott elemre feliratott osztályokból készít egy listát amiből lehet törölni és hozzáadni is <code>classList</code></p>
+                <h3>Új DOM elem létrehozása</h3>
+                <ol>
+                    <li><p>Készítsd el az elemet <code>var {elementVariable} = document.createElement({tagName}[, options])</code></p></li>
+                    <li><p>Készítsd el a tartalmat amit hozzá akarsz majd fűzni <code>var {contentVariable} = document.createTextNode("{String}}");  </code></p></li>
+                    <li><p>Add az elemhez a tartalmat <code>{elementVariable}.appendChild({contentVariable})</code></p></li>
+                    <li><p>Add az elkészült elmet a DOM Treehez <code>document.querySelector({HTML Element}).appendChild({elementVariable})</code></p></li>
+                </ol>
+            </section>
+            <section>
+                <h2>Esemény Kezelés</h2>
+                <h3>Az esemény kezelés lépései: </h3>
+                <ol>
+                    <li>Azonosíts be egy eseményt</li>
+                    <li>Rendelj egy viselkedést a kiválasztott DOM elemhez</li>
+                    <li>Futtasd a függvényt ha bekövetkezik</li>
+                </ol>
+                <h3>Esemény kezelő létrehozása</h3>
+                <p><code><pre>
+                    {elementName}.addEventListener("{eventName}",{eventHandlerMethod},{hasEventBubbeling})
+                </pre></code></p>
+                <h3>Argumentumok átadása esemény kezelőnek</h3>
+                <p><code><pre>
+                    function {eventHandlerMethodName}(e,current) {
+                        {Logic}
+                    }
+
+                    {elementName}.addEventListener("{eventName}", function(e){
+                        {eventHandlerMethod}(e, this)
+                    }, {hasEventBubbeling})
+                </pre></p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

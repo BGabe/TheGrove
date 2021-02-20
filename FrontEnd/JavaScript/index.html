@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Kezőlap</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőoldal</a></li>
+                <li><a href="objectoriented.html">Objektum Orientált Programozása</a></li>
+                <li><a href="events.html">Események</a></li>
+                <li><a href="apis.html">API</a></li>
+                <li><a href="tricks.html">Trükkök</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <p>Mire érdemes figyelni Javascript használatakor:
+                    <ul>
+                        <li>Használd a Console-t a játszóteredként hogy ha kiakarsz próbálni egy kódot</li>
+                        <li>A sctipt tag elhelyezése számít pl: Ha a HTML Head részében helyezzük el akkor a scritp nem tudja manipulálni a DOM-ot hiszen még le sem generálódott</li>
+                        <li>A Javascript Case Sensitive</li>
+                        <li>A ; jel használata nem kötelező de ajánlott a kódok végén</li>
+                        <li>Escape Karakter: \</li>
+                        <li>Egysoros komment: // {comment}</li>
+                        <li>Többsoros komment: /* {comment} /*</li>
+                        <li>NaN: Not a Number</li>
+                    </ul>
+                </p>
+            </section>
+            <section>
+                <h2>Változók</h2>
+                <ul>
+                    <li>Konstans értékekhez: const {variableName}; (Konvenció: Csupa nagybetűvel írd a változó nevét)</li>
+                    <li>Globális vagy lokális változókhoz: var {variableName}; (Konvenció: camelCase)</li>
+                    <li>Blokk szintű változókhoz: let {variableName}; (Konvenció: camelCase)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Adat Típusok</h2>
+                <p>Null: Nemlétező érték (Nézz utána !)</p>
+                <p>Number: Számoks</p>
+                <p>String: Szövegek és szimbólumok megadásuk: "{string}" vagy '{string}'</p>
+                <p>Boolean: Logikai</p>
+                <p>Undefined: A változó létre lett hozva de nincs értéke</p>
+                <p>Array: {var/let/const} {variableName} = [{itemOne},{itemTwo}]
+                    <ul>Fontosabb Metódusai:
+                        <li>reverse(): Megfordítja a tömb elemeinek sorrendjét</li>
+                        <li>shift(): Törli a tömb első elemét</li>
+                        <li>unshift({newValue}): Beszúrja a megadott elemet a tömb elejére</li>
+                        <li>pop(): Törli a tömb utolsó elemét</li>
+                        <li>push({newValue}): Beszúrja a megadott elemet a tömb végére</li>
+                        <li>splice({startIndex},{numberOfRemoves}): Megadott pozíció után megadott számú elemet töröl</li>
+                        <li>slice(): Másolatot készít a tömbről</li>
+                        <li>indexOf({searchTarget},{startingIndex}): A megadott elemet a megadott pozíciótól kezdve keresi</li>
+                        <li>join({separator}): Fogja a tömb összes elemét, stringé alakítja és a megadott elválasztással el tördeli a stringet</li>
+                    </ul>
+                </p>
+                <p>Map: Kulcs-érték pár alapon működik, ahol a beszúrási sorrend számít</p>
+                <p>Sets: Értékek gyűjteménye {var/let/const} {variableName} = new Set(); 
+                    <ul>
+                        <li>Vegyes típusokat is tartalmazhat</li>
+                        <li>Minden értéknek egyedinek kell lennie</li>
+                    </ul>
+                </p>
+                <p>Symbols: Egyedi azonosítokhoz lehet használni: const {variableName} = Symbol();</p>
+            </section>
+            <section>
+                <h2>Operátorok</h2>
+                <p>Type Operator: Kideríthető vele egy változó pillanatnyi típusa typeof {variableName}</p>
+                <p>Assigment Operator: Értékadásra használható {variableName} = {value} </p>
+                <p>Arithmetic Operators: Aritmetikai műveletekre használhatóak + - * /
+                    <ul>Shorthandek:
+                        <li>+=</li>
+                        <li>-=</li>
+                        <li>*=</li>
+                        <li>/=</li>
+                    </ul>
+                </p>
+                <p>Unary Operator:  Értékek növelése/csökkentése inkrementálisan {variableName}++/--</p>
+                <p>Lose Equality Operator: Ha két változót értékek alapján akarok összehasonlítani {variableName} == {variableName}</p>
+                <p>Strict Equality Operator: Ha két változó értékek és típus alapján akarok összehasonlítani {variableName} === {variableName}</p>
+                <p>Comparator Operator: Össze hasonlításra használhatóak &lt; &gt; &gt;= &lt;=</p>
+                <p>Lose Not Equal Operator: Ha két változót értékek alapján akarok összehasonlítani {variableName} != {variableName}</p>
+                <p>Strict Not Equal Operator: Ha két változó értékek és típus alapján akarok összehasonlítani {variableName} !== {variableName}</p>
+                <p>Logical Operators:
+                    <ul>
+                        <li>AND: És &&</li>
+                        <li>OR: Vagy ||</li>
+                        <li>XOR: Kizáró vagy ({variableName} == {variableName} || {variableName} == {variableName}) && ({variableName} == {variableName} != {variableName} == {variableName})</li>
+                    </ul>
+                </p>
+                <p>Treanry Operator: Egyszerű döntésekhez {variableName} {logicalOperator} {variableName} ? {trueStatemant} : {falseStatemant}</p>
+                <p>Spread Operator: Megadott tömb elemeit metódus paraméter alakítja ...{arrayName}</p>
+            </section>
+            <section>
+                <h2>Ciklusok</h2>
+                <p>Ciklus megállítása: break;</p>
+                <p>Iteráció léptetése befejezés előtt: continue;</p>
+                <h3>For of Ciklus</h3>
+                <code>
+                    <pre>
+                        for (let {loopVariable} of {variableName}){
+                            {Statemant}
+                        }
+                    </pre>
+                </code>
+            </section>
+            <section>
+                <h2>Hibakezelés</h2>
+                <p>Ha tesztelés miatt ki akarunk iratni vlaamit consolba: console.info();</p>
+                <p>Ha hibát akarunk dobni: console.error();</p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

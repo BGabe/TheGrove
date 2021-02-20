@@ -1,0 +1,164 @@
+<DOCTYPE! html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bevezetés</title>
+</head>
+<body>
+    <header>
+        <nav>
+
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Pár alap tudnivaló az informatikáról</h2>
+                <p>Az információ az a címzettje számára új, vagy általa nem ismert adat, hír, közlés vagy tájékoztatás</p>
+                <p>Az információ mennyiségnek mértékegysége a <strong>bit</strong> ami a legkissebb információhordozó egység.</p>
+                <p>A összefoglaló néven jeleket amikkel kommunikálunk karaktereknek nevezzük (szám, betű, írásjel, szimbólumok...)</p>
+                <p>Egy karakter leírásához 8 bit szükséges ezért egy ilyen 8-as csoportot nevezünk <strong>byte</strong>-nak</p>
+            </article>
+            <article>
+                <h2>A Számítógép Részei</h2>
+                <h3>Hardware</h3>
+                <p>A számítógépet és az azt felépítő részegységeket nevezzük <strong>hardware</strong>-nek</p>
+                <p>Amikor használjuk a számítógépet általában nem csak egy-egy karakterrel hanem mondatokkal, szövegekkel nagy táblázatokkal dolgozunk ezért a gépnek rendelkeznie kell egy
+                    olyan részegységgel ahol a feldolgozandó információkat raktározni tudja ez a <strong>memória</strong> melynek feladata az adatok és programok tárolása a műveletvégzés idejére.
+                    Azonban a memória előállítása drága ezért információ tároló kapacitása kicsi ezért a programok bezársa, számítógép kikapcsolása után az adtok törlődnek belőle.
+                </p>
+                <p>Szükség van egy olyan tárolóra amelyek segítségével a programok és az adatok hosszútávon és biztonságosan tárolhatóak. Ezeket nevezzük háttértárollóknak az ezeken tárolt programok önmagukban 
+                    nem futtathatóak ezeket először bekell tölteni a memóriába (Ezért telik időb amíg elindul egy program)
+                    <ul>
+                        <li>Mervlemez (HDD) ez mechanikus tehát nagyon sérülékeny</li>
+                        <li>Solid State Drive (SSD) ez elektronikus tehát jobban bírja az esést</li>
+                    </ul>
+                </p>
+                <p> Az adatokat eltudjuk tárolni már képesek vagyunk betölteni egy gyorsan elérhető helyre de kell egy egység amely el is végzi a programokban megadott műveleteket ez a <strong>processzor</strong>
+                </p>
+                <p><strong>Konfiguráció</strong>-nak azt az összeállítást nevezzük ami a teljes működőképes rendszert adja</p>
+                <p><strong>Perifériáknak</strong> nevezzük azokat a részegységeket amelyek a számítógépet összekapcsolják a külvilággal, az alapműködéshez azonban többnyire nélkülözhetőek
+                illetve a központi egységtől függetlenül egy speciális feladatot lát el.
+                Ezeket az eszközöket különböző típusú csatlakoztatók segítségével tudjuk a gépünkhöz kötni ezek közül a fontosabbak:
+                <ul>
+                    <li>USB: Egerek, billentyűzet, nyomtatók, telefon, pendrive..</li>
+                    <li>230V hálózat: Tápkábel</li>
+                    <li>UTP: Hálózati (Ethernet) kábel</li>
+                </ul>
+                </p>
+                <h3>Szoftver</h3>
+                <p>A <strong>szoftver</strong> a számítógépen futó programok összefoglaló elnevezése</p>
+                <p>Adatokkal végzendő tevékenységeket leíró algoritmusok és műveletek logikus sorozata a <strong>program</strong></p>
+                <p>A háttértárolókon elhelyezkedő összetartozó adatokat és programokat nevezzük <strong>állományoknak</strong> vagy <strong>file</strong>-oknak</p>
+                <p>A számítógépet működtető programelemet <strong>operációs rendszernek</strong> (OS) nevezik ez vezérli a számítógépes rendszer erőforrásait és az erőforrásokat használó folyamatokat
+                    Gyakorlatilag ezzel a programmal tudunk kommunikálni a számítógépünkell: programokat, adatokat törölni, futtatni másolni...
+                </p>
+                <p><strong>Meghajtók</strong> mivel egyszerre több a háttértároló is lehet a gépünkben ezért megkell tudnunk őket különböztetni,
+                    ezért minden egyes tárolóhoz az ABC egy betűjét rendeli az OS. Lehetőségünk van egy fizikai háttértárolót több meghajtóra is felosztani így könynebben tudjuk azt kezelni. 
+                </p>
+                <p><strong>Mappastruktúra vagy Könyvtárstruktúra</strong> ezt a felhasználó alakítja ki lényegében ez az a rendszer melyben állományaink (ideális esetben) logikusan és könnyen
+                    megtalálható módon helyezkednek el. Egy ilyen struktúrában két dolgot különböztetünk meg:
+                    <ul>
+                        <li>Főkönyvtár: A közvetlenül a meghajtón található mappák</li>
+                        <li>Alkönyvtár: A főkönyvtárakban található összes többi mappa</li>
+                    </ul>
+                </p>
+                <p>Állományok azonosítása: erre egy név amit a felhasználó ad meg és egy pontal elválasztott kiterjesztés szolgál ami az állomány tartalmától függ (formátum) {állományNeve}.{kiterjesztés}
+                    Főbb kiterjesztések
+                    <ul>
+                        <li>DOC: Szöveg (Word régi)</li>
+                        <li>DOCX: Szöveg (Word újabb)</li>     
+                        <li>TXT: Szöveg (formázatlan)</li>
+                        <li>RTF: Szöveg (formázott)</li>
+                        <li>PDF: dokumentum (nem lehet szerkeszteni)</li>
+                        <li>XLS: Excel táblázat (régi)</li>
+                        <li>XLSX: Excel táblázat (újabb)</li>
+                        <li>ZIP: Tömörített állomány (ezt először ki kell csomagolni egy programmal)</li>
+                        <li>HTM: Weboldal</li>
+                        <li>HTML: Weboldal</li>
+                        <li>GIF: Kép (mozgó)</li>
+                        <li>JPG: Kép</li>
+                        <li>IMG: Kép</li>
+                        <li>PNG: Kép</li>
+                        <li>MP3: Zene</li>
+                        <li>WAV: Hangfájl</li>
+                        <li>MOV: Videofilm</li>
+                    </ul>
+                    Fontos hogy egy mappán belül ugyan olyan nevű és kiterjesztésű file nem szerepelhet
+                </p>
+                <p><strong>Elérési út:</strong> Az állományok teljes elérési útja egy meghajtó azonosítóból, egy vagy több mappa-azonosítóból és egy állomány azonosítóból áll</p>
+            </article>
+            <article>
+                <h2>A Gépkezelése</h2>
+                <p>Nagyon fontos a gép alapvetően egy buta eszköz csak azt tudja amit "megtanítottak" neki (programok) és szószerint azt a parancsot fogja végrehajtani amit kiadtunk neki
+                    Ezért ne féljünk a géptől, ha valami nem sikerül elsőre majd megy másodikra vagy harmadikra. A gépet billentyűzetről elrontani nem tudjuk igaz végezhetünk rossz műveletekkel 
+                    kellemtlen adatvesztéssel járó dolgokat de ez sose fog a gép fizikai elromlásához vezetni !
+                </p>
+                <h3>A Billentyűzet</h3>
+                <p>Négyrészt különböztetünk meg rajta: 
+                    <ul>
+                        <li>Karakteres billentyűmező: Ez tartalmazza a betűket és a számokat</li>
+                        <li>Funkcióbillentyűk: Felül elhelyezkedő F1-F12 általában program specifikus tevékenyésgek végezhetőek el vele</li>
+                        <li>Numerikus billentyűzet: A számok kényelmesebb bevitelére szolgál</li>
+                        <li>Vezérlőbillentyűk: Speciális funkciók kénylemes gyors elvégzésére szolgálnak</li>
+                    </ul>
+                </p>
+                <p>Fontosabb billentyűk: 
+                    <ul>
+                        <li>Shift: Folyamatos nyomvatartás mellett másodlagos karakterek gépelése, </li>
+                        <li>Caps Lock: Kis és nagybetűk írásnak váltása</li>
+                        <li>Tab: Mezők közötti lépkedésre használható</li>
+                        <li>Ctrl: Vezérlési célokra használható folyamatos nyomvatartás mellet megváltoztatja a billentyűzet működését</li>
+                        <li>Alt: Folyamatos nyomvatartás mellett másodlagos karaktereket lehet vele gépelni</li>
+                        <li>Alt Gr: Folyamatos nyomvatartás mellett harmadlagos karaktereket lehet vele gépelni</li>
+                        <li>Esc: Az aktuális feladatban visszalépést, kilépést vagy törlést valósít meg</li>
+                        <li>Enter: Sor váltásra és mezők/parancsok elfogadására használható</li>
+                        <li>Balra Nyíl: Kurzor elmozdítása egy pozícióval balra</li>
+                        <li>Jobbra Nyíl: Kurzor elmozdítása egy pozícióval jobbra</li>
+                        <li>Fel Nyíl: Kurzor elmozdítása egy pozícióval felfelé</li>
+                        <li>Le Nyíl: Kurzor elmozdítása egy pozícióval lefelé</li>
+                        <li>Num Lock: Ezzel a gombal kapcsolhatjuk ki- és be a numerikus billentyűzetet</li>
+                        <li>Print Screen: Ezzel a billentyűvel a Windowsban a képernyő tartalmát a vágólapra másolhatjuk (Képernyőkép)</li>
+                        <li>Windows: Ezzel a billentyűvel rögtön elérhetjük a Start menüt</li>
+                    </ul>
+                </p>
+                <p>Fontosabb billentyű kombinációk:
+                    <ul>
+                        <li>Ctrl + Alt + Delete: A windwos biztonsági képernyőjének az előhívása hasznos lehet telefonon kérünk segítséget informatikusoktó<li></li></li>
+                        <li>Windows + R: Alkalmazás gyorsindítás ez is hibaelhárítás során előnyös</li>
+                        <li>Windows + Print Screen: Képernyő tartalmának mentés a Képek mappába</li>
+                        <li>Alt + Tab: Alkalmazások közti váltás</li>
+                        <li>Windows + D: Váltás asztalra</li>
+                        <li>Windows + L: Számítógép zárolása, ha nem akrjuk lekcspolni a gépet de nem akarjuk hogy más is hozzáférjen amíg távol vagyunk</li>
+                        <li>Windows + Q: Kereső panel megnyitása</li>
+                        <li>Windows + +: Nagyítás</li>
+                        <li>Windows + -: Kicsinyítés</li>
+                    </ul>
+                </p>
+                <h3>Egér</h3>
+                <p>Kezelése: Úgy kell kézbe venni hogy kábelvezetés a tőlünk távolabbi oldalán, mutatóujjunk a baloldali gombon legyen.</p>
+                <p>Kattintás: az egér baloldali gombjának egyszeri rövid megnyomása az egér elmozdítása nélkül. Segítségével kijelölni tudunk mindig azt amire a kurzor mutat.</p>
+                <p>Jobb Klikk: az egér jobboldali gombjának egyszeri rövid megnyomása ezzel a helyi menüt hívjuk elő</p>
+                <p>Dupla Kattintás: Az egér baloldali gombjának kétszeri rövid gyors egyutánban történő megnyomása az egér elmozdítása nélkül</p>
+                <p>Megragadás: A mozgatni kívánt file-on az egér baloldali gombját megnyomjuk és nyomvatartjuk</p>
+                <p>Húzás: A mozgatni kívánt filet megragadjuk és az egér baloldali gombjának nyomvatartása mellett mozgatjuk az egeret. </p>
+                <p>Szélrehúzás: Egy nem teljes méretű ablakot egyik szélén megragadunk és a képernyő bal vagy jobb oldali szélére húzzuk. A windows átméretezi az ablakot fél képernyő méretűre</p>
+                <p>Tárcsa használata: Görgetésével az adott dokumentumot fel-le tudjuk mozgatni vagy kcsinyíteni-nagyítani tudjuk a méretét</p>
+                <h3>Kurzor</h3>
+                <p>A kurzor egy helyzet jelző a képernyőn amely a következő tevékenység vagy begépelendő karakter heylét jelöli. </p>
+                <p>Szövegkurzor: Egy villogó függőleges vonaldarab amely adabevitel esetén a következő karakter helyét jelöli</p>
+                <p>Egérkurzot: Egy az egérrel mozgatható nyíl amellye a képernyőn a megfelelő helyre mutathatunk</p>
+                <p>Várakozásikurzor: Speciális egérkurzor ami akkor jelenik meg ha várakoznunk kell a lassabban végrehajtható műveletek befejeződésére. Ilyenkor a kurzor mozgatható de műveleteket nem tudunk vele végezni.</p>
+                <h3>Programok Kezelése</h3>
+                <p>Programok Telepítése: <ol>
+                    <li>Letöltöd a programot az internetről</li>
+                    <li>Elindítod a letöltöt file-t ami megnyit egy párbeeszéd panelt amit varázslónak hívnak</li>
+                    <li>Követed a panelen megjelenő utasításokat és megvárod amíg a számítógép elvégzi a szükséges műveleteket.</li>
+                </ol></p>
+                <p>Program indítása: A programot szimbolizáló ikonon való dupla kattintás</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

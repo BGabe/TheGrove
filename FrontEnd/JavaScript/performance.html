@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Performance</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőoldal</a></li>
+                <li><a href="objectoriented.html">Objektum Orientált Programozása</a></li>
+                <li><a href="events.html">Események</a></li>
+                <li><a href="apis.html">API</a></li>
+                <li><a href="tricks.html">Trükkök</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>Betöltési Módok</h2>
+                <p>Right Away Loading
+                    <ul>
+                        <li>&lt;script src="{URL}"&gt&lt;/script&gt;;</li>
+                        <li>Folyamat: HTML Parsing => (Render Block) JS Download => JS Execution => HTML Parsing</li>
+                    </ul>
+                </p>
+                <p>Asynchronous Loading
+                    <ul>
+                        <li>&lt;script src="{URL}" async&gt&lt;/script&gt;;</li>
+                        <li>Folyamat: HTML Parsing and JS Download => (Render Block) JS Execution => HTML Parsing</li>
+                    </ul>
+                </p>
+                <p>Deferred Loading
+                    <ul>
+                        <li>&lt;script src="{URL}" defer&gt&lt;/script&gt;;</li>
+                        <li>Folyamat: HTML Parsing and JS Download => JS Execution</li>
+                    </ul>
+                </p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript OOP</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőoldal</a></li>
+                <li><a href="objectoriented.html">Objektum Orientált Programozása</a></li>
+                <li><a href="events.html">Események</a></li>
+                <li><a href="apis.html">API</a></li>
+                <li><a href="tricks.html">Trükkök</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>Függvények</h2>
+                <h3>Named functions</h3>
+                <p>Akkor előnyös ha többször is akarjuk használni vagy nagy mennyiségű kódot tartalmaz
+                <code>
+                    <pre>
+                        function {functionName}({parameter}) {
+                            {Logic}
+                        }
+                    </pre>
+                </code></p>      
+                <h3>Anonymous functions</h3>
+                <code>
+                    <pre>
+                        (var/let/const) {variableName} = function({parameter}) {
+                            {Logic}
+                        }
+                    </pre>
+                </code>
+                <h3>Arrow functions</h3>
+                <ul>
+                    <li> Egy paraméter és egy soros kifejezés:
+                        <code>
+                            <pre>
+                                var {variableName} = {parameterName} => {Logic} 
+                            </pre>
+                        </code>
+                    </li>
+                    <li> Paraméternélkül vagy többmint egy paraméteres több soros kifejezés 
+                        <code>
+                            <pre>
+                                var {variableName} = ({parameterName,parameterName}) => {
+                                    {Logic}
+                                    return {value}
+                                } 
+                            </pre>
+                        </code>
+                    </li>
+                </ul>
+                <h3>Generators</h3>
+                <p>Olyan metódusok amiknek a futását meglehet állítani és később folytatni lehet
+                <code>
+                    <pre>
+                        function {functionName}() {
+                            {Logic}
+                            yield; Ezzel megállítjuk a futását és lezárjuk a szakaszt
+                            {Logic}
+                        }
+                        {function}.next() A függvény következő szakaszának indítása 
+                    </pre>
+                </code></p>
+            </section>
+            <section>
+                <h2>Osztályok</h2>
+                <p>Nem lehet őket felül írni</p>
+                <h3>Osztály létrehozása</h3>
+                <code>
+                    <pre>
+                        class {className} {
+                            consturctor({propertyName},{anotherPropertyName}) {
+                                this.{property} = {property};
+                                this.{anotherProperty} = {anotherProperty};
+                            }
+                            {methodName}({parameter}) {
+                                {Logic}
+                            }
+                        }
+                    </pre>
+                </code>
+                <h3>Példányosítás</h3>
+                <code>
+                    <pre>
+                        var {variableName} = new {class};
+                    </pre>
+                </code>
+                <h3>Öröklődés</h3>
+                <p>Származtatás: <code>class {childClass} extends {parentClass}</code></p>
+                <p>Ős osztály konstruktorának a használata: <code>super({arguments});</code></p>
+                <p>Ős osztály metódusainak a hívása: <code>super.parentClassFunction({arguments});</code></p>
+                <h3>Setter</h3>
+                <p><code><pre>
+                    set {methodName}({parameterName}) {
+                        this.property = property;
+                    }
+                </pre></code></p>
+                <h3>Getter</h3>
+                <p><code><pre>
+                    get {methodName}() {
+                        return this.property;
+                    }
+                </pre></code></p>
+                <h3>Statikus Metódusok</h3>
+                <p><code>static {methodName}</code></p>
+                <h3>Prototype</h3>
+                <h3>Mixins</h3>
+                <p>Több osztály össze komponálása <code><pre>
+                    let mixin = {
+                        {methodName}() {
+                            {Logic}
+                        }
+                    }
+
+                    let {methodNameMixin} = {
+                        __proto__: mixin,
+
+                        {methodName}() {
+                            super.{methodName}();
+                        }
+                    }
+
+                    Object.assign(this.methodNameMixin);
+                </pre></code></p>
+            </section>
+            <section>
+                <h2>Objektumok</h2>
+                <p>Létrehozás: <code>{variableType} {objectName} = new {object}();</code></p>
+                <p>Dot notation: <code>{object}.{property/method};</code></p>
+                <p>Bracket notation: Ha property vagy metódus nevében olyan karakter van ami problémát okozhat <code>{object}["{property/method}"];</code></p>
+                <h3>Propertyk</h3>
+                <p>Property létrehozása: <code>{object}.{propertyName}</code></p>
+                <p>Shorthand: <code><pre>
+                    {variableType} {objectName} = {
+                        {propertyName}: {value};
+                        {propertyName}: {value};
+                        {methodName}({parameter}) {
+                            {Logic}
+                        }
+                    }
+                </pre></code></p>
+                <h3>Konstruktorok</h3>
+                <p>Konstruktor létrehozása: <code><pre>
+                    {objectName}({propertyName},{propertyName}) {
+                        this.{property} = property;
+                        this.{property} = property;
+                        {methodName}({parameter}) {
+                            {Logic}
+                        }
+                    }
+                </pre></code></p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Trükkök</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőoldal</a></li>
+                <li><a href="objectoriented.html">Objektum Orientált Programozása</a></li>
+                <li><a href="events.html">Események</a></li>
+                <li><a href="apis.html">API</a></li>
+                <li><a href="tricks.html">Trükkök</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Closures</h2>
+                <p>Metódusok absztraktálására érdemes használni</p>
+                <code>
+                    <pre>
+                        function {outerFunctionName}() { 
+                            {outerVariable}; [Elérhető a kódban de csak a belső function képes használni] 
+                            function {innerFunctionName}({innerParameter}) {
+
+                                {Statemant}; 
+                                
+                            } 
+                            return {innerFunctionName};                            
+                        } 
+                    </pre>
+                </code>
+                <p>var kulcsszó használatakor tudtunkon kívül is kialakuhatnak Colusre-ek ilyenkor érdemes a let kulcsszó használata</p>
+                <h2>Modules</h2>
+                <p>Ha a kódunk egyrészét el akarjuk különíteni, továbbra is használni akarjuk de a működését el akarjuk rejteni a többi kód elől (Closure-ket itt érdemes használni)</p>
+                <h2>IIFE</h2>
+                <p>Olyan function ami meghívásnélkül lefut amint lefordul</p>
+                <code>
+                    <pre>
+                      var {functionName} = (function() {
+                          {Statemant}
+                      })();
+                    </pre>
+                </code>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

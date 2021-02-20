@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript API-ik</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőoldal</a></li>
+                <li><a href="objectoriented.html">Objektum Orientált Programozása</a></li>
+                <li><a href="events.html">Események</a></li>
+                <li><a href="apis.html">API</a></li>
+                <li><a href="tricks.html">Trükkök</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section>
+                <h2>Aszinkron Tulajdonságok</h2>
+                <h3>Mit érdemes tudni</h3>
+                <ul>
+                    <li>Minnél kevesebb Ajax request-ed legyen</li>
+                    <li>A GET az mindig gyorsabb mint egy POST</li>
+                    <li>Mindig használj ha lehet JSON-t mint XML-t</li>
+                    <li>Mindig annyi adatot és csak azokat add át amire szükséged van</li>
+                </ul>
+                <h3>XMLHttpRequest</h3>
+                <p>JSON-al is működik</p>
+                <p>Létrehozása: <code>open({HTTP Method}, {Target URL});</code></p>
+                <p>Használata: <code>send();</code></p>
+                <p>readyState Értékei <ul>
+                    <li>0 request not yet initalized</li>
+                    <li>1 rerquest set up</li>
+                    <li>2 request sent</li>
+                    <li>3 request in process</li>
+                    <li>4 request complete</li>
+                </ul></p>
+                <p>readyState Eseményei: readyStateChange</p>
+                <h3>Promise-ok</h3>
+                <p>Aszinkron kódnál használható hogy ha várni kell egy vagy több dependencia feloldására</p>
+                <p>Használat: <code><pre>
+                    const {anonymMethodName} = {parameter} => {
+                        return new Promise((resolve, reject) => {
+                            if({validationLogic}) {
+                                reject(new Error({errorMsg}));
+                            }
+                            setTimeout( () => resolve({Arguments},{Time}))
+                        });
+                    };
+
+                    {anonymMethod}.then({pa})
+                </pre></code></p>
+                <h3>Fetch</h3>
+                <p>Adatok betöltésekor ideális használni</p>
+                <p>Használat: <code><pre>fetch({API Endpoint}, {init ({JWT}/HTTP Method/ Header Data)}).then({Logic});</pre></code> ez vissza tér az egész responsBody-val</p>
+                <h3>Async és Await</h3>
+                <p>A metódus vár az await után megadott metódus visszatérési értékére</p>
+                <p>Használat: <code><pre>
+                    const {functioName} = async() => {
+                        {Logic};
+                        await {function};
+                        {Logic};
+                    }
+                </pre></code></p>
+                <h3>API hívás menete fetch-el</h3>
+                <ol>
+                    <li><p>Először vissza kell térni a responsal és utána lehet vele dolgozni <code>.then({response} => {Logic})</code></p></li>
+                    <li><p>További függvényeket is hozzá köthetünk az API híváshoz <code>.then({parameter} => {Logic})</code></p></li>
+                    <li><p>Ha hibát dob az API hívás akkor a then-eket átugorva a catch fut le<code>.catch({parameter} => {function}({parameter}))</code> <small>Csak az API-hoz köthető hibákat lehet vele kezleni logikai hibákra külön ellenőrzést kell végezni</small></p></li>
+                </ol>            
+            </section>
+        </article>
+    </main>
+</body>
+</html>
